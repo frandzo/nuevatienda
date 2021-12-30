@@ -164,27 +164,33 @@
   left: 50px;
   width: 0px;
   /* height: 224px; */
-  padding-left: 0px;
-  padding-top: 16px;
+  padding: 0px;
+  margin:0px;
   overflow: hidden;
   background-color: #232346;
   list-style-type: none;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-transition: width 0.3s ease-out;
-  transition: width 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  /* word-wrap:break-word; */
+  overflow-wrap: break-word;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav .menu ul li {
-  position: relative;
-  margin-left: 16px;
-}
 
 .nav .menu ul li {
   display: block;
+  word-wrap:break-word;
+  overflow-wrap: break-word;
+  width: 290px;
   position: relative;
   text-decoration: none;
+  border:1px solid white;
   color: white;
   margin-bottom: 24px;
   font-family: "IBM Plex Mono", monospace;
@@ -193,11 +199,24 @@
   font-size: 16px;
   line-height: 28px;
   cursor: pointer;
+  padding:0px;
+  margin:0px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.nav .menu ul h4{
+  word-wrap:break-word;
+  overflow-wrap: break-word;
+  display: flex;
 }
 
 .nav .menu ul li:hover {
   color: #00f3bb;
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
+  background:black;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .nav .menu ul li:active {

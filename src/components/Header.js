@@ -1,3 +1,4 @@
+import { ShoppingCart } from "./ShoppingCart/ShoppingCart.js";
 require('bootstrap');
 
 export function Header(){
@@ -9,13 +10,7 @@ export function Header(){
         <label for="checkbox">
           <img src='https://www.svgrepo.com/show/80543/shopping-cart-outline.svg' width="32px"/>
         </label>
-        <ul>
-          <li>Elemento1</li>
-          <li>Elemento2</li>
-          <li>Elemento3</li>
-          <li>Elemento4</li>
-          <h4>Total</h4>
-        </ul>
+        <ShoppingCart/>
       </div>
     </div>
     )

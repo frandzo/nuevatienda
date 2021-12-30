@@ -14,7 +14,7 @@ export const ShoppingCart = () => {
       return totalPrice + currentProduct.price
     },0)
     setTotalPrice(total)
-  }
+  }  
 
   useLiveQuery(async () => {
     const productsDB = await db.cart.toArray()
@@ -29,22 +29,14 @@ export const ShoppingCart = () => {
 
   return (
     <>
-      <Navbar.Toggle aria-controls="navbar-dark-example" />
-      <Navbar.Collapse id="navbar-dark-example">
-        <Nav>
-          <NavDropdown
-            id="nav-dropdown-dark-example"
-            title="Carrito"
-            menuVariant="dark"
-          >
-            {productsCart?.map((product) => {
-              return <ShoppingCartItem key={product.id} item={product} />
-            })}
-            <NavDropdown.Divider />
-            <NavDropdown.Item>Total: ${totalPrice} </NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
+      <ul>
+        {productsCart?.map((product) => {
+          return <ShoppingCartItem key={product.id} item={product} />
+        })}
+        <h4>
+          Total: {totalPrice}
+        </h4>
+      </ul>
     </>
   );
 };
