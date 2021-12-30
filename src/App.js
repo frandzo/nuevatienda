@@ -1,22 +1,23 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
-import { HeaderApp } from "./components/HeaderApp";
-import { ListProducts } from "./components/Products/ListProducts";
-import { AlertProduct } from "./components/Products/AlertProduct";
+import logo from './logo.svg';
+import './App.css';
+import {Header} from './components/Header.js';
+import {Product} from './components/Product.js';
+import json from "./products.json";
 
-const App = () => {
+function App() {
+  // json.products[1].title
+
+  let productos=json.products.map((obj)=>{return <Product item={obj}></Product>})
+
   return (
-    <>
-      <HeaderApp />
-      <Container>
-        <div className="App">
-          <AlertProduct />
-          <ListProducts />
+    <div className="App">
+        <Header></Header>
+        {/* <Product item={json.products[1]}></Product> */}
+        <div className="List">
+          {productos};
         </div>
-      </Container>
-    </>
+    </div>
   );
-};
+}
 
 export default App;

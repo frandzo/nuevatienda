@@ -7,7 +7,7 @@ const style = {
   marginBottom: '30px'
 }
 
-export const HeaderApp = () => (
+export const Header = () => (
   <Navbar bg="dark" variant="dark" style={style}>
     <Container>
       <Navbar.Brand href="#home">

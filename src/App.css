@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #001f2b;
+  /* color:#009bd6; */
+  color: white;
 }
 
 .App-logo {
@@ -7,10 +14,81 @@
   pointer-events: none;
 }
 
+.List {
+  /* background-color:red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 2s linear;
   }
+}
+
+.Product {
+  background: white;
+  border: 1px solid black;
+  margin: 10px;
+  box-shadow: 5px 5px 5px black;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Product img {
+  width: 100px;
+}
+
+.Product h4 {
+  width: 280px;
+  color: #009bd6;
+}
+
+.Product h2 {
+  display: flex;
+  /* width: 80px; */
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #00415a;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 5px 5px 5px gray;
+}
+
+.Product div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid black; */
+  width: 250px;
+}
+
+.Product div button {
+  background: #00415a;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px gray;
+  width: 100px;
+  height: 40px;
+  border-style: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.Product div button:hover {
+  background: #97e2ff;
+  color: black;
+  transition: all 0.2s ease;
 }
 
 .App-header {
