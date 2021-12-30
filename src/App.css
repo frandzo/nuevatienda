@@ -106,6 +106,138 @@
   color: #61dafb;
 }
 
+.btnCarrito {
+  position: fixed;
+  left: 50px;
+  top: 50px;
+  height: 40px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.listaCarrito {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  /* border: 1px solid white; */
+  display: flex;
+  z-index: 1;
+  background: black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  list-style-type: none;
+  left: 50px;
+  top: 90px;
+}
+
+.listaCarrito h4 {
+  /* border: 1px solid white; */
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav label {
+  position: fixed;
+  cursor: pointer;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 40px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.nav label img {
+}
+
+.nav .menu ul {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  width: 0px;
+  /* height: 224px; */
+  padding-left: 0px;
+  padding-top: 16px;
+  overflow: hidden;
+  background-color: #232346;
+  list-style-type: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav .menu ul li {
+  position: relative;
+  margin-left: 16px;
+}
+
+.nav .menu ul li {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 24px;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.nav .menu ul li:hover {
+  color: #00f3bb;
+  text-decoration: line-through;
+}
+
+.nav .menu ul li:active {
+  color: rgba(6, 10, 36, 0.56);
+}
+
+.nav .menu input {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.nav .menu input:checked ~ ul {
+  width: 300px;
+  border: 2px solid white;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav .menu input:checked ~ label {
+  background: black;
+  color: white;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  border: 2px solid white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.nav .menu input:checked ~ label img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
