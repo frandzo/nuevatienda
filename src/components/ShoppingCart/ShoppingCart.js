@@ -23,7 +23,7 @@ export const ShoppingCart = () => {
 
   useEffect(() => {
     if(productsCart.length > 0) {
-      getTotalPrice().toFixed(2)
+      getTotalPrice()
     }
   },[productsCart])
 
