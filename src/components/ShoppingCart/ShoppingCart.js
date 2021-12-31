@@ -34,7 +34,7 @@ export const ShoppingCart = () => {
           return <ShoppingCartItem key={product.id} item={product} />
         })}
         <h4>
-          Total: {totalPrice}
+          {productsCart.length>0?("Total: " + totalPrice):("El carrito está vacío")}
         </h4>
       </ul>
     </>
