@@ -13,7 +13,7 @@ export const ShoppingCart = () => {
     const total = productsCart?.reduce((totalPrice, currentProduct) => {
       return totalPrice + currentProduct.price
     },0)
-    setTotalPrice(total)
+    setTotalPrice(total.toFixed(2))
   }  
 
   useLiveQuery(async () => {
