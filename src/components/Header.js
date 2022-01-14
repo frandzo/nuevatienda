@@ -1,10 +1,13 @@
 import { ShoppingCart } from "./ShoppingCart/ShoppingCart.js";
+import {Link} from "react-router-dom";
 require('bootstrap');
 
 export function Header(){
     return (
     <div className='nav'>
-        <h1>MI TIENDA ONLINE</h1>
+        <Link to="/">
+          <h1>MI TIENDA ONLINE</h1>
+        </Link>
         <div class="menu">
         <input type="checkbox" id="checkbox" />
         <label for="checkbox">

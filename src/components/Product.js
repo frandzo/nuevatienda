@@ -9,11 +9,12 @@ export function Product(props){
     let img = props.item.image;
     let price = props.item.price;
 
-    const addProductToCart = ({title, price, category}) => {
+    const addProductToCart = ({title, price, category, id}) => {
         db.cart.add({
           title: title,
           price: price,
-          category: category
+          category: category,
+          productid: id
         })
       }
 

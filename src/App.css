@@ -1,3 +1,6 @@
+body{  
+  background-color: #001f2b;
+}
 .App {
   text-align: center;
   display: flex;
@@ -184,13 +187,13 @@
 
 
 .nav .menu ul li {
-  display: block;
-  word-wrap:break-word;
+  display: flex;
+  word-wrap: break-word;
   overflow-wrap: break-word;
   width: 290px;
   position: relative;
   text-decoration: none;
-  border:1px solid white;
+  /* border:1px solid white; */
   color: white;
   margin-bottom: 24px;
   font-family: "IBM Plex Mono", monospace;
@@ -204,6 +207,14 @@
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
+
+.nav .menu ul img {
+  display:inline-block;
+  height:40px;
+  z-index: 2;
+}
+
 
 .nav .menu ul h4{
   word-wrap:break-word;
